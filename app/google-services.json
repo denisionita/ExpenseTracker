@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "590761711191",
+    "project_id": "licenta2-bc389",
+    "storage_bucket": "licenta2-bc389.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590761711191:android:69316faf5e8671ce0f3512",
+        "android_client_info": {
+          "package_name": "com.example.expensetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590761711191-o5v5tsqf1fe93tl05451kvpgsm1u8ttr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0ynlbLUS5IHMVPSAeIjlZFOMcWQawfVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "590761711191-o5v5tsqf1fe93tl05451kvpgsm1u8ttr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
