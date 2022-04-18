@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,7 +26,6 @@ public class RegisterActivity extends AppCompatActivity {
     EditText repeatPasswordInput;
 
     TextView registerButton;
-
     FirebaseAuth mAuth;
 
     @Override
@@ -40,6 +41,8 @@ public class RegisterActivity extends AppCompatActivity {
         passwordInput = findViewById(R.id.password_input);
         repeatPasswordInput = findViewById(R.id.repeatPassword_input);
         registerButton = findViewById(R.id.registerButton);
+        //button=findViewById(R.id.buttonnnnn);
+        mAuth = FirebaseAuth.getInstance();
 
         registerButton.setOnClickListener(view -> {
             createUser();
@@ -63,13 +66,12 @@ public class RegisterActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
-                        Log.d("TAG", "create:success");
                         Toast.makeText(RegisterActivity.this, "User registered successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                        startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                     }else{
                         Toast.makeText(RegisterActivity.this, "Registration Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        finish();
-                        startActivity(getIntent());
+                        //finish();
+                        //startActivity(getIntent());
                     }
                 }
             });
